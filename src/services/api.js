@@ -26,36 +26,40 @@ const getTemperatureData = async () => {
   }
 };
 
-const getDisplayData = async () => {
+const getLEDState = async () => {
   try {
-    const response = await fetch(`${API_URL}/display`);
+    const response = await fetch(`${API_URL}/led`);
     if (!response.ok) {
-      throw new Error('Failed to fetch display data');
+      throw new Error('Failed to fetch LED state');
     }
     return response.json();
   } catch (error) {
-    console.error('Error fetching display data:', error);
-    return { text: 'No display available' };
+    console.error('Error fetching LED state:', error);
+    return { on: false, color: [0, 0, 0] };
   }
 };
 
-const updateDisplayData = async (newDisplayText) => {
+const setLEDState = async (newLEDState) => {
   try {
-    const response = await fetch(`${API_URL}/display`, {
+    const response = await fetch(`${API_URL}/led`, {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify({ text: newDisplayText }),
+      body: JSON.stringify(newLEDState),
     });
     if (!response.ok) {
-      throw new Error('Failed to update display data');
+      throw new Error('Failed to update LED state');
     }
-    return response.json();
   } catch (error) {
-    console.error('Error updating display data:', error);
-    return { message: 'Failed to update display' };
+    console.error('Error updating LED state:', error);
   }
 };
 
-const api = { getHumidityData, getTemperatureData, getDisplayData, updateDisplayData };
+const api = {
+  getHumidityData,
+  getTemperatureData,
+  getLEDState,
+  setLEDState,
+};
 
 export default api;
+
