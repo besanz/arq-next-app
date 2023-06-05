@@ -12,7 +12,10 @@ function HumiditySensorData() {
       setLoading(false);
     };
 
+    // Cada 10 segundos
     fetchHumidityData();
+    const intervalId = setInterval(fetchHumidityData, 10000);
+    return () => clearInterval(intervalId);
   }, []);
 
   return (

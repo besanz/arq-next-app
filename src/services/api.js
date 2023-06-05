@@ -1,4 +1,4 @@
-const API_URL = 'http://192.168.1.157:5000';
+const API_URL = 'http://10.207.0.15:5000';
 
 const getHumidityData = async () => {
   try {
@@ -62,4 +62,3 @@ const api = {
 };
 
 export default api;
-

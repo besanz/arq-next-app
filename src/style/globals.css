@@ -8,7 +8,7 @@ html {
 
 body {
   @apply text-gray-100 dark:text-white;
-  background: linear-gradient(120deg, #000000, #353542, #282830);
+  background: #000000;
   background-size: 400% 400%;
   animation: gradient 15s ease infinite, wind 10s linear infinite;
   transition: background 0.5s;
@@ -28,10 +28,12 @@ body {
 
 .title {
   @apply text-4xl font-bold mb-8 text-center text-white transition-all duration-500 ease-in-out transform hover:scale-105;
+  text-shadow: 2px 2px #808080;
 }
 
 .subtitle {
   @apply text-2xl mb-8 text-center text-white transition-all duration-500 ease-in-out transform hover:scale-105;
+  text-shadow: 2px 2px #808080;
 }
 
 .sensor-data,
@@ -47,6 +49,115 @@ body {
 .display-control button {
   @apply bg-blue-500 text-white transition-all duration-500 ease-in-out transform hover:scale-105;
 }
+
+.neon-text {
+  color: #ffffff;
+  text-shadow: 
+    0 0 5px #00c9ff, 
+    0 0 10px #00c9ff, 
+    0 0 15px #00c9ff, 
+    0 0 20px #29abe2, 
+    0 0 30px #29abe2, 
+    0 0 40px #29abe2;
+}
+
+.changing-neon-text {
+  color: #ffffff;
+  animation: neon 50s infinite;
+}
+
+@keyframes neon {
+  0% { text-shadow: 0 0 5px #ff0000, 0 0 10px #ff0000, 0 0 15px #ff0000, 0 0 20px #ff0000, 0 0 30px #ff0000, 0 0 40px #ff0000; }
+  2% { text-shadow: 0 0 5px #ff4000, 0 0 10px #ff4000, 0 0 15px #ff4000, 0 0 20px #ff4000, 0 0 30px #ff4000, 0 0 40px #ff4000; }
+  4% { text-shadow: 0 0 5px #ff8000, 0 0 10px #ff8000, 0 0 15px #ff8000, 0 0 20px #ff8000, 0 0 30px #ff8000, 0 0 40px #ff8000; }
+  6% { text-shadow: 0 0 5px #ffbf00, 0 0 10px #ffbf00, 0 0 15px #ffbf00, 0 0 20px #ffbf00, 0 0 30px #ffbf00, 0 0 40px #ffbf00; }
+  8% { text-shadow: 0 0 5px #ffff00, 0 0 10px #ffff00, 0 0 15px #ffff00, 0 0 20px #ffff00, 0 0 30px #ffff00, 0 0 40px #ffff00; }
+  10% { text-shadow: 0 0 5px #bfff00, 0 0 10px #bfff00, 0 0 15px #bfff00, 0 0 20px #bfff00, 0 0 30px #bfff00, 0 0 40px #bfff00; }
+  12% { text-shadow: 0 0 5px #80ff00, 0 0 10px #80ff00, 0 0 15px #80ff00, 0 0 20px #80ff00, 0 0 30px #80ff00, 0 0 40px #80ff00; }
+  14% { text-shadow: 0 0 5px #40ff00, 0 0 10px #40ff00, 0 0 15px #40ff00, 0 0 20px #40ff00, 0 0 30px #40ff00, 0 0 40px #40ff00; }
+  16% { text-shadow: 0 0 5px #00ff00, 0 0 10px #00ff00, 0 0 15px #00ff00, 0 0 20px #00ff00, 0 0 30px #00ff00, 0 0 40px #00ff00; }
+  18% { text-shadow: 0 0 5px #00ff40, 0 0 10px #00ff40, 0 0 15px #00ff40, 0 0 20px #00ff40, 0 0 30px #00ff40, 0 0 40px #00ff40; }
+  20% { text-shadow: 0 0 5px #00ff80, 0 0 10px #00ff80, 0 0 15px #00ff80, 0 0 20px #00ff80, 0 0 30px #00ff80, 0 0 40px #00ff80; }
+  22% { text-shadow: 0 0 5px #00ffbf, 0 0 10px #00ffbf, 0 0 15px #00ffbf, 0 0 20px #00ffbf, 0 0 30px #00ffbf, 0 0 40px #00ffbf; }
+  24% { text-shadow: 0 0 5px #00ffff, 0 0 10px #00ffff, 0 0 15px #00ffff, 0 0 20px #00ffff, 0 0 30px #00ffff, 0 0 40px #00ffff; }
+  26% { text-shadow: 0 0 5px #00bfff, 0 0 10px #00bfff, 0 0 15px #00bfff, 0 0 20px #00bfff, 0 0 30px #00bfff, 0 0 40px #00bfff; }
+  28% { text-shadow: 0 0 5px #0080ff, 0 0 10px #0080ff, 0 0 15px #0080ff, 0 0 20px #0080ff, 0 0 30px #0080ff, 0 0 40px #0080ff; }
+  30% { text-shadow: 0 0 5px #0040ff, 0 0 10px #0040ff, 0 0 15px #0040ff, 0 0 20px #0040ff, 0 0 30px #0040ff, 0 0 40px #0040ff; }
+  32% { text-shadow: 0 0 5px #0000ff, 0 0 10px #0000ff, 0 0 15px #0000ff, 0 0 20px #0000ff, 0 0 30px #0000ff, 0 0 40px #0000ff; }
+  34% { text-shadow: 0 0 5px #4000ff, 0 0 10px #4000ff, 0 0 15px #4000ff, 0 0 20px #4000ff, 0 0 30px #4000ff, 0 0 40px #4000ff; }
+  36% { text-shadow: 0 0 5px #8000ff, 0 0 10px #8000ff, 0 0 15px #8000ff, 0 0 20px #8000ff, 0 0 30px #8000ff, 0 0 40px #8000ff; }
+  38% { text-shadow: 0 0 5px #bf00ff, 0 0 10px #bf00ff, 0 0 15px #bf00ff, 0 0 20px #bf00ff, 0 0 30px #bf00ff, 0 0 40px #bf00ff; }
+  40% { text-shadow: 0 0 5px #ff00ff, 0 0 10px #ff00ff, 0 0 15px #ff00ff, 0 0 20px #ff00ff, 0 0 30px #ff00ff, 0 0 40px #ff00ff; }
+  42% { text-shadow: 0 0 5px #ff00bf, 0 0 10px #ff00bf, 0 0 15px #ff00bf, 0 0 20px #ff00bf, 0 0 30px #ff00bf, 0 0 40px #ff00bf; }
+  44% { text-shadow: 0 0 5px #ff0080, 0 0 10px #ff0080, 0 0 15px #ff0080, 0 0 20px #ff0080, 0 0 30px #ff0080, 0 0 40px #ff0080; }
+  46% { text-shadow: 0 0 5px #ff0040, 0 0 10px #ff0040, 0 0 15px #ff0040, 0 0 20px #ff0040, 0 0 30px #ff0040, 0 0 40px #ff0040; }
+  48% { text-shadow: 0 0 5px #ff0000, 0 0 10px #ff0000, 0 0 15px #ff0000, 0 0 20px #ff0000, 0 0 30px #ff0000, 0 0 40px #ff0000; }
+  50% { text-shadow: 0 0 5px #ff4000, 0 0 10px #ff4000, 0 0 15px #ff4000, 0 0 20px #ff4000, 0 0 30px #ff4000, 0 0 40px #ff4000; }
+  52% { text-shadow: 0 0 5px #ff8000, 0 0 10px #ff8000, 0 0 15px #ff8000, 0 0 20px #ff8000, 0 0 30px #ff8000, 0 0 40px #ff8000; }
+  54% { text-shadow: 0 0 5px #ffbf00, 0 0 10px #ffbf00, 0 0 15px #ffbf00, 0 0 20px #ffbf00, 0 0 30px #ffbf00, 0 0 40px #ffbf00; }
+  56% { text-shadow: 0 0 5px #ffff00, 0 0 10px #ffff00, 0 0 15px #ffff00, 0 0 20px #ffff00, 0 0 30px #ffff00, 0 0 40px #ffff00; }
+  58% { text-shadow: 0 0 5px #bfff00, 0 0 10px #bfff00, 0 0 15px #bfff00, 0 0 20px #bfff00, 0 0 30px #bfff00, 0 0 40px #bfff00; }
+  60% { text-shadow: 0 0 5px #80ff00, 0 0 10px #80ff00, 0 0 15px #80ff00, 0 0 20px #80ff00, 0 0 30px #80ff00, 0 0 40px #80ff00; }
+  62% { text-shadow: 0 0 5px #40ff00, 0 0 10px #40ff00, 0 0 15px #40ff00, 0 0 20px #40ff00, 0 0 30px #40ff00, 0 0 40px #40ff00; }
+  64% { text-shadow: 0 0 5px #00ff00, 0 0 10px #00ff00, 0 0 15px #00ff00, 0 0 20px #00ff00, 0 0 30px #00ff00, 0 0 40px #00ff00; }
+  66% { text-shadow: 0 0 5px #00ff40, 0 0 10px #00ff40, 0 0 15px #00ff40, 0 0 20px #00ff40, 0 0 30px #00ff40, 0 0 40px #00ff40; }
+  68% { text-shadow: 0 0 5px #00ff80, 0 0 10px #00ff80, 0 0 15px #00ff80, 0 0 20px #00ff80, 0 0 30px #00ff80, 0 0 40px #00ff80; }
+  70% { text-shadow: 0 0 5px #00ffbf, 0 0 10px #00ffbf, 0 0 15px #00ffbf, 0 0 20px #00ffbf, 0 0 30px #00ffbf, 0 0 40px #00ffbf; }
+  72% { text-shadow: 0 0 5px #00ffff, 0 0 10px #00ffff, 0 0 15px #00ffff, 0 0 20px #00ffff, 0 0 30px #00ffff, 0 0 40px #00ffff; }
+  74% { text-shadow: 0 0 5px #00bfff, 0 0 10px #00bfff, 0 0 15px #00bfff, 0 0 20px #00bfff, 0 0 30px #00bfff, 0 0 40px #00bfff; }
+  76% { text-shadow: 0 0 5px #0080ff, 0 0 10px #0080ff, 0 0 15px #0080ff, 0 0 20px #0080ff, 0 0 30px #0080ff, 0 0 40px #0080ff; }
+  78% { text-shadow: 0 0 5px #0040ff, 0 0 10px #0040ff, 0 0 15px #0040ff, 0 0 20px #0040ff, 0 0 30px #0040ff, 0 0 40px #0040ff; }
+  80% { text-shadow: 0 0 5px #0000ff, 0 0 10px #0000ff, 0 0 15px #0000ff, 0 0 20px #0000ff, 0 0 30px #0000ff, 0 0 40px #0000ff; }
+  82% { text-shadow: 0 0 5px #4000ff, 0 0 10px #4000ff, 0 0 15px #4000ff, 0 0 20px #4000ff, 0 0 30px #4000ff, 0 0 40px #4000ff; }
+  84% { text-shadow: 0 0 5px #8000ff, 0 0 10px #8000ff, 0 0 15px #8000ff, 0 0 20px #8000ff, 0 0 30px #8000ff, 0 0 40px #8000ff; }
+  86% { text-shadow: 0 0 5px #bf00ff, 0 0 10px #bf00ff, 0 0 15px #bf00ff, 0 0 20px #bf00ff, 0 0 30px #bf00ff, 0 0 40px #bf00ff; }
+  88% { text-shadow: 0 0 5px #ff00ff, 0 0 10px #ff00ff, 0 0 15px #ff00ff, 0 0 20px #ff00ff, 0 0 30px #ff00ff, 0 0 40px #ff00ff; }
+  90% { text-shadow: 0 0 5px #ff00bf, 0 0 10px #ff00bf, 0 0 15px #ff00bf, 0 0 20px #ff00bf, 0 0 30px #ff00bf, 0 0 40px #ff00bf; }
+  92% { text-shadow: 0 0 5px #ff0080, 0 0 10px #ff0080, 0 0 15px #ff0080, 0 0 20px #ff0080, 0 0 30px #ff0080, 0 0 40px #ff0080; }
+  94% { text-shadow: 0 0 5px #ff0040, 0 0 10px #ff0040, 0 0 15px #ff0040, 0 0 20px #ff0040, 0 0 30px #ff0040, 0 0 40px #ff0040; }
+  96% { text-shadow: 0 0 5px #ff0000, 0 0 10px #ff0000, 0 0 15px #ff0000, 0 0 20px #ff0000, 0 0 30px #ff0000, 0 0 40px #ff0000; }
+  98% { text-shadow: 0 0 5px #ff4000, 0 0 10px #ff4000, 0 0 15px #ff4000, 0 0 20px #ff4000, 0 0 30px #ff4000, 0 0 40px #ff4000; }
+  100% { text-shadow: 0 0 5px #ff8000, 0 0 10px #ff8000, 0 0 15px #ff8000, 0 0 20px #ff8000, 0 0 30px #ff8000, 0 0 40px #ff8000; }
+}
+
+
+.button-off, .button-on {
+  font-family: 'Helvetica Neue', sans-serif;
+  font-size: 18px;
+  text-align: center;
+  letter-spacing: 1px;
+  transition: all 0.3s ease-out;
+  padding: 10px 20px;
+  margin-top: 20px;
+  width: 50%;
+  position: relative;
+  display: block;
+  border-radius: 25px;
+  border: none;
+}
+
+.button-off {
+  background-color: black;
+  color: white;
+  border: 2px solid white;
+  box-shadow: 0px 10px 24px 0px rgba(0,0,0,0.75);
+}
+
+.button-on {
+  background-color: white;
+  color: black;
+  border: 2px solid black;
+  box-shadow: 0px 10px 24px 0px rgba(0,0,0,0.1);
+}
+
+.button-off:hover, .button-on:hover {
+  transform: translateY(-5px);
+}
+
+.button-off:active, .button-on:active {
+  transform: translateY(0);
+}
+
 
 @keyframes slideInLeft {
   from {
@@ -121,7 +232,7 @@ body {
     opacity: 1;
   }
   25%,
-  75% {
+   75% {
     opacity: 0;
   }
 }

@@ -12,7 +12,10 @@ function TemperatureSensorData() {
       setLoading(false);
     };
 
+    // Cada 10 segundos
     fetchTemperatureData();
+    const intervalId = setInterval(fetchTemperatureData, 10000);
+    return () => clearInterval(intervalId);
   }, []);
 
   return (

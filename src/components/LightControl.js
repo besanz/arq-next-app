@@ -18,7 +18,9 @@ export default function LightControl() {
   return (
     <div>
       <ChromePicker color={ledState.color} onChange={updateColor} />
-      <button onClick={toggleLED}>{ledState.on ? 'Turn Off' : 'Turn On'}</button>
+      <button className={ledState.on ? "button-on" : "button-off"} onClick={toggleLED}>
+        {ledState.on ? 'Turn Off' : 'Turn On'}
+      </button>
     </div>
   );
 }
